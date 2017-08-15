@@ -1,7 +1,7 @@
 package com.example.controller;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class IndexController {
 
     //添加一个日志器
-    private static final Logger logger = LoggerFactory.getLogger(IndexController.class);
+    private static final Logger logger = LogManager.getLogger(IndexController.class);
 
     //映射一个action
     @RequestMapping("/index")

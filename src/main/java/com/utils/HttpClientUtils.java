@@ -21,11 +21,11 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 
 import com.alibaba.fastjson.JSONObject;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Created by IDEA
@@ -35,8 +35,7 @@ import com.alibaba.fastjson.JSONObject;
  */
 
 public class HttpClientUtils {
-    private static Logger logger = LoggerFactory
-            .getLogger(HttpClientUtils.class); // 日志记录
+    private static Logger logger = LogManager.getLogger(HttpClientUtils.class); // 日志记录
 
 
     /**

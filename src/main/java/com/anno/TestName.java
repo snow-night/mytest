@@ -1,14 +1,15 @@
 package com.anno;
 
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 
 @NameAnno(value="ABC")
 public class TestName {
 
-    public static  Logger logger = LoggerFactory.getLogger(TestName.class);
+    static Logger logger = LogManager.getLogger(TestName.class);
+//    public static  Logger logger = LoggerFactory.getLogger(TestName.class);
 
 
     private String name;

@@ -1,8 +1,8 @@
 package com.example.controller;
 
 import com.example.service.TestQuaService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/")
 public class TestQualifierController implements InitializingBean{
 
-    Logger logger = LoggerFactory.getLogger(this.getClass());
+    Logger logger = LogManager.getLogger(this.getClass());
 
     @Autowired
     @Qualifier("testQuaServiceImplCopy")

@@ -16,16 +16,16 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.ByteArrayBuffer;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 
 import com.alibaba.fastjson.JSONObject;
+import org.apache.logging.log4j.Logger;
 
 
 public class HttpClientRequest {
 
-	private static Logger logger = LoggerFactory.getLogger(HttpClientRequest.class);
+	private static Logger logger = LogManager.getLogger(HttpClientRequest.class);
 	private final static Pattern AT_PATTERN = Pattern
 			.compile("@[\\u4e00-\\u9fa5\\w\\-]+");
 

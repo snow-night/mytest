@@ -1,8 +1,8 @@
 package com.example.controller;
 
 import com.example.vo.MailVo;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,7 +26,7 @@ public class Demo {
     private String name;
     private String age;
 
-    private static final Logger logger = LoggerFactory.getLogger("12345");
+    private static final Logger logger = LogManager.getLogger("12345");
 
     @Autowired
     MailVo mailVo;

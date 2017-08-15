@@ -18,8 +18,8 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.ByteArrayBuffer;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Created by IDEA
@@ -29,7 +29,7 @@ import org.slf4j.LoggerFactory;
  */
 public class HttpsUtil {
 
-    private static Logger logger = LoggerFactory.getLogger(HttpsUtil.class);
+    private static Logger logger = LogManager.getLogger(HttpsUtil.class);
     private static final Pattern AT_PATTERN = Pattern.compile("@[\\u4e00-\\u9fa5\\w\\-]+");
     private static final Pattern TAG_PATTERN = Pattern.compile("#([^\\#|.]+)#");
     private static final Pattern LINK_PATTERN = Pattern.compile("http://t.cn/([a-zA-Z0-9]+)");
