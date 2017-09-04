@@ -10,6 +10,10 @@ import java.util.UUID;
  */
 public class UUIDGenerateUtil {
 
+    /**
+     * 生成uuid
+     * @return 生成的uuid
+     */
     public static String uuidGenerater() {
 
         String s = UUID.randomUUID().toString();

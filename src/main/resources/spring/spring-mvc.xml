@@ -85,21 +85,29 @@
 
     <!--<context:component-scan base-package="com.**.example"/>-->
     <!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 -->
-    <context:component-scan base-package="com.**">
-        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    <context:component-scan base-package="com.**.controller">
+        <!--<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>-->
     </context:component-scan>
 
-    <context:property-placeholder ignore-resource-not-found="true" location="classpath*:/*.properties" />
 
 
-    <bean id="demo"  class="com.example.controller.Demo">
+    <!--<bean id="propertyConfigurer"  class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"  p:location="/properties/jdbc.properties" />-->
+
+    <!--<bean id="dataSource"   class="org.springframework.jdbc.datasource.DriverManagerDataSource"-->
+          <!--p:driverClassName="${jdbc.driverClassName}"-->
+          <!--p:url="${jdbc.url}"-->
+          <!--p:username="${jdbc.username}"-->
+          <!--p:password="${jdbc.username}" />-->
+
+
+    <!--<bean id="demo"  class="com.example.controller.Demo">-->
         <!--<constructor-arg index="1">-->
         <!--<value>18</value>-->
         <!--</constructor-arg>-->
         <!--<constructor-arg index="0">-->
         <!--<value>呵呵哒</value>-->
         <!--</constructor-arg>-->
-    </bean>
+    <!--</bean>-->
 
 
     <!--定时任务：task-->

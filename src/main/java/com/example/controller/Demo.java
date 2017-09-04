@@ -28,6 +28,7 @@ public class Demo {
 
     private static final Logger logger = LogManager.getLogger("12345");
 
+
     @Autowired
     MailVo mailVo;
 
